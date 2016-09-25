@@ -19,6 +19,25 @@ function custom_settings_page() { ?>
   </div>
 <?php }
 
-add_theme_support( 'post-thumbnails', array( 'page' ) );
+add_theme_support( 'post-thumbnails' );
+
+function create_site_post_type() {
+	register_post_type('site-post,
+			array(
+			'labels' => array(
+					'name' => __('Sites'),
+					'singular_name' => __('Site'),
+			),
+			'public' => true,
+			'has_archive' => true,
+			'supports' => array(
+					'title',
+					'editor',
+					'thumbnail',
+				  'custom-fields'
+			)
+	));
+}
+add_action('init', 'create_site_post_type');
 
 ?>
