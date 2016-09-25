@@ -50,8 +50,8 @@
 						<!-- Me -->
 							<article id="me" class="panel">
 								<header>
-									<h1>Ben Selland</h1>
-									<p>Technologist - Leader - Father</p>
+									<h1><?php echo get_bloginfo( 'name' ); ?></h1>
+									<p><?php echo get_bloginfo( 'description' ); ?></p>
 								</header>
 								<a href="#work" class="jumplink pic">
 									<span class="arrow icon fa-chevron-right"><span>See my work</span></span>
