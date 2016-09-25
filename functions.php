@@ -23,7 +23,7 @@ add_theme_support( 'post-thumbnails' );
 
 //Custom Site Posts
 function create_site_post_type() {
-  register_post_type('site-post,
+  register_post_type('site-post',
     array(
       'labels' => array('name' => __('Sites'), 'singular_name' => __('Site')),
       'public' => true,'has_archive' => true,
@@ -33,5 +33,3 @@ function create_site_post_type() {
 }
 
 add_action('init', 'create_site_post_type');
-
-?>
