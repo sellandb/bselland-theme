@@ -70,25 +70,21 @@
 									I have been lucky enough to work on several world class digital teams over the course of my career. Check out a couple of my projects.
 								</p>
 								<section>
-									<div class="row">
-										<div class="4u 12u$(mobile)">
-											<a href="http://www.nascar.com" class="image fit"><img src="images/NASCAR.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="http://www.atpworldtour.com" class="image fit"><img src="images/ATP.jpg" alt=""></a>
-										</div>
-										<div class="4u$ 12u$(mobile)">
-											<a href="http://www.barclaysatpworldtourfinals.com/" class="image fit"><img src="images/BarclaysFinals.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="http://www.ualberta.ca/" class="image fit"><img src="images/UAlberta.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="http://newtrail.ualberta.ca/" class="image fit"><img src="images/NewTrail.jpg" alt=""></a>
-										</div>
-										<div class="4u$ 12u$(mobile)">
-											<a href="http://cwfis.cfs.nrcan.gc.ca/home" class="image fit"><img src="images/NRCan.jpg" alt=""></a>
-										</div>
+                  <div class="row">
+
+                  <?php
+          				$args =  array(
+          					'post_type' => 'site-post',
+          					'orderby' => 'modified',
+          					'order' => 'ASC'
+          				);
+          				 $custom_query = new WP_Query( $args );
+                   while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+                    <div class="4u 12u$(mobile)">
+                      <a href="<?php the_field("site-link") ?>" class="image fit"><?php the_post_thumbnail(); ?></a>
+                    </div>
+
+          				<?php endwhile; ?>
 									</div>
 								</section>
 							</article>
