@@ -55,7 +55,9 @@
 								</header>
 								<a href="#work" class="jumplink pic">
 									<span class="arrow icon fa-chevron-right"><span>See my work</span></span>
-									<img src="images/me.jpg" alt="" />
+                  <?php if ( has_post_thumbnail() ) {
+                    the_post_thumbnail();
+                  } ?>
 								</a>
 							</article>
 
