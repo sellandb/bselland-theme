@@ -19,4 +19,6 @@ function custom_settings_page() { ?>
   </div>
 <?php }
 
+add_theme_support( 'post-thumbnails', array( 'page' ) );
+
 ?>
