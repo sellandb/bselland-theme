@@ -81,7 +81,7 @@
           				 $custom_query = new WP_Query( $args );
                    while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
                     <div class="4u 12u$(mobile)">
-                      <a href="<?php the_field("site-link") ?>" class="image fit"><?php the_post_thumbnail(); ?></a>
+                      <a href="<?php the_field("site_link") ?>" class="image fit"><?php the_post_thumbnail(); ?></a>
                     </div>
 
           				<?php endwhile; ?>
